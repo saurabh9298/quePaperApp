@@ -1,0 +1,33 @@
+<h1>Edit Answer Key</h1>
+<hr>
+
+<!-- {{answerKey | json}} -->
+<form #frm="ngForm">
+    <div class="row">
+
+
+        <div class="col">
+
+            <div class="form-group">
+                <label for="anskey">Enter new answer key </label><br><br>
+                <input id="anskey" name="anskey" type="text" [(ngModel)]="answerKey.answerkey" #anskey="ngModel"
+                    class="form-control">
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <label>&nbsp;</label>
+                <div>
+                    <button (click)="Update()" >Submit</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</form>
+
+<br><br>
+
+<button routerLink="/quebank/">Back</button>

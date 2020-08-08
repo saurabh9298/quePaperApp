@@ -1,0 +1,35 @@
+<h1>Edit Question or Choice</h1>
+<hr>
+
+
+
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Sr. No.</th>
+            <th>Questions</th>
+            <th>Choice1</th>
+            <th>Choice2</th>
+            <th>Choice3</th>
+            <th>Choice4</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let que of cust; index as i">
+            <td>{{i+1}}</td>
+            <td>{{que.questions}}</td>
+            <td>{{que.choice1}}</td>
+            <td>{{que.choice2}}</td>
+            <td>{{que.choice3}}</td>
+            <td>{{que.choice4}}</td>
+            <td><button [routerLink]="['/quebank/edit-question', que.questionsid]">Edit question</button></td>
+            <td><button [routerLink]="['/quebank/edit-question/choice1', que.questionsid]">Edit Choice1</button></td>
+            <td><button [routerLink]="['/quebank/edit-question/choice2', que.questionsid]">Edit Choice2</button></td>
+            <td><button [routerLink]="['/quebank/edit-question/choice3', que.questionsid]">Edit Choice3</button></td>
+            <td><button [routerLink]="['/quebank/edit-question/choice4', que.questionsid]">Edit Choice4</button></td>
+        </tr>
+    </tbody>
+</table> 
+
+<button routerLink="/quebank">Back</button>

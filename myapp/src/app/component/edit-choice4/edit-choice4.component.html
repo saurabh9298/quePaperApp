@@ -1,0 +1,33 @@
+<h1>Edit Choice4</h1>
+<hr>
+
+<!-- {{choice | json}} -->
+<form #frm="ngForm">
+    <div class="row">
+
+
+        <div class="col">
+
+            <div class="form-group">
+                <label for="choicee">Enter updated choice here </label><br><br>
+                <input id="choicee" name="choicee" type="text" [(ngModel)]="choice.choice4" #choicee="ngModel"
+                    class="form-control">
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <label>&nbsp;</label>
+                <div>
+                    <button (click)="Update()" >Submit</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</form>
+
+<br><br>
+
+<button routerLink="/quebank/">Back</button>

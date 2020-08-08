@@ -1,0 +1,23 @@
+<h1>List of Question Papers</h1>
+<hr>
+
+
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Sr. No.</th>
+            <th>Question Bank</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let que of quespaper; index as i">
+            <td>{{i+1}}</td>
+            <td > {{que.questionpapername}}</td>
+            <td><button [routerLink]="['/addquestionpaper/questionpaper/view-questions-in-a-particular-question-paper', que.questionpapername]">View questions </button></td>
+            <td><button [routerLink]="['/addquestionpaper', que.questionpapername]">Add or remove questions</button></td>
+        </tr>
+    </tbody>
+</table>
+
+

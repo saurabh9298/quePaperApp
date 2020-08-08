@@ -1,0 +1,37 @@
+<h1>Questions in a question bank</h1>
+<hr>
+
+<button [routerLink]="['/quebank/add-new-question/bank']">Add new question</button>
+
+<br><br>
+
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Sr. No.</th>
+            <th>Questions</th>
+            <th>Choice1</th>
+            <th>Choice2</th>
+            <th>Choice3</th>
+            <th>Choice4</th>
+            <th>Answer Key</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let que of cust; index as i">
+            <td>{{i+1}}</td>
+            <td>{{que.questions}}</td>
+            <td>{{que.choice1}}</td>
+            <td>{{que.choice2}}</td>
+            <td>{{que.choice3}}</td>
+            <td>{{que.choice4}}</td>
+            <td>{{que.answerkey}}</td>
+            <td><button [routerLink]="['/quebank/delete-question', que.questionsid]">Delete question</button></td>
+            <td><button [routerLink]="['/quebank/edit-question-choice', que.quebankname, que.questionsid]">Edit question or choice</button></td>
+            <td><button [routerLink]="['/quebank/edit-answer-key', que.quebankname, que.questionsid]">Change answer key</button></td>
+        </tr>
+    </tbody>
+</table> 
+
+<button routerLink="/quebank">Back</button>

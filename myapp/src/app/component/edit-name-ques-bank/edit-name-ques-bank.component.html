@@ -1,0 +1,33 @@
+<h1>Edit Question Bank Name</h1>
+<hr>
+
+
+<form #frm="ngForm">
+    <div class="row">
+
+
+        <div class="col">
+
+            <div class="form-group">
+                <label for="bank">Enter New Question Bank Name </label><br><br>
+                <input id="bank" name="bank" type="text" [(ngModel)]="bankname.quebankname" #bank="ngModel"
+                    class="form-control">
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <label>&nbsp;</label>
+                <div>
+                    <button (click)="Save()">Submit</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</form>
+
+<br><br>
+
+<button routerLink="/quebank">Back</button>

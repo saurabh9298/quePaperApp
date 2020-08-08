@@ -1,0 +1,33 @@
+<h1>Question Paper</h1>
+<hr>
+hello
+
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Sr. No.</th>
+            <th>Question</th>
+            <th>Choice1</th>
+            <th>Choice2</th>
+            <th>Choice3</th>
+            <th>Choice4</th>
+            <th>Answer Key</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let que of questions; index as i">
+            <td>{{i+1}}</td>
+            <td>{{que.q1}}</td>
+            <td>{{que.c1}}</td>
+            <td>{{que.c2}}</td>
+            <td>{{que.c3}}</td>
+            <td>{{que.c4}}</td>
+            <td>{{que.ak}}</td>
+        </tr>
+    </tbody>
+</table>
+<br><br>
+<button [routerLink]="['/questionpaper']">Back to question paper list</button>
+
+

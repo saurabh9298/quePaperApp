@@ -1,0 +1,73 @@
+<h1>Add a new question</h1>
+<hr>
+
+<!-- {{que | json}} -->
+
+<form #frm="ngForm">
+
+    <table>
+        <div class="row">
+
+
+            <div class="col">
+
+                <div class="form-group">
+
+                    <div class="form-group">
+                        <td><label for="ques">Question Bank ID</label></td>
+                        <tr><input id="ques" name="ques" type="text" [(ngModel)]="que.quebanknameid"
+                                #ques="ngModel" class="form-control"></tr>
+                    </div><br>
+
+                    <div class="form-group">
+                        <td><label for="ques">New Question</label></td>
+                        <tr><input id="ques" name="ques" type="text" [(ngModel)]="que.questions" #ques="ngModel"
+                                class="form-control"></tr>
+                    </div><br>
+
+                    <div class="form-group">
+                        <td><label for="ques">Choice1</label></td>
+                        <tr><input id="ques" name="ques" type="text" [(ngModel)]="que.choice1" #ques="ngModel"
+                                class="form-control"></tr>
+                    </div><br>
+                    <div class="form-group">
+                        <td><label for="ques">Choice2</label></td>
+                        <tr><input id="ques" name="ques" type="text" [(ngModel)]="que.choice2" #ques="ngModel"
+                                class="form-control"></tr>
+                    </div><br>
+                    <div class="form-group">
+                        <td><label for="ques">choice3</label></td>
+                        <tr><input id="ques" name="ques" type="text" [(ngModel)]="que.choice3" #ques="ngModel"
+                                class="form-control"></tr>
+                    </div><br>
+                    <div class="form-group">
+                        <td><label for="ques">Choice4</label></td>
+                        <tr><input id="ques" name="ques" type="text" [(ngModel)]="que.choice4" #ques="ngModel"
+                                class="form-control"></tr>
+                    </div><br>
+                    <div class="form-group">
+                        <td><label for="ques">Answer Key</label></td>
+                        <tr><input id="ques" name="ques" type="text" [(ngModel)]="que.answerkey" #ques="ngModel"
+                                class="form-control"></tr>
+                    </div><br>
+
+                    <div class="form-group">
+                        <td><label>&nbsp;</label></td>
+                        <tr>
+                            <div>
+                                <button (click)="save()">Submit</button>
+                            </div>
+                        </tr>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </table>
+
+</form>
+
+<br><br>
+<button routerLink="/quebank">Back</button>

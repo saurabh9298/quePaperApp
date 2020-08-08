@@ -1,0 +1,33 @@
+<h1>Edit Question</h1>
+<hr>
+
+<!-- {{ques | json}} -->
+<form #frm="ngForm">
+    <div class="row">
+
+
+        <div class="col">
+
+            <div class="form-group">
+                <label for="quest">Enter updated question here </label><br><br>
+                <input id="quest" name="quest" type="text" [(ngModel)]="ques.questions" #quest="ngModel"
+                    class="form-control">
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <label>&nbsp;</label>
+                <div>
+                    <button (click)="Update()" >Submit</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</form>
+
+<br><br>
+
+<button routerLink="/quebank/">Back</button>

@@ -1,0 +1,23 @@
+<p>quebankafterclick works!</p>
+
+<button>Edit Name</button> |
+<button>Delete</button> |
+<button routerLink="">View Questions</button>
+
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Sr. No.</th>
+            <th>Questions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let q of que; index as i">
+            <td>{{i+1}}</td>
+            <td>{{que.questions}}</td>
+        </tr>
+    </tbody>
+</table> 
+
+

@@ -1,0 +1,39 @@
+<h1>List of Question</h1>
+<hr>
+
+
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Sr. No.</th>
+            <th>Question Bank</th>
+            <th>Questions</th>
+            <th>Choice1</th>
+            <th>Choice2</th>
+            <th>Choice3</th>
+            <th>Choice4</th>
+            <th>Answer Key</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let que of quespaper; index as i">
+            <td>{{i+1}}</td>
+            <td>{{que.quebankname}}</td>
+            <td> {{que.questions}}</td>
+            <td> {{que.choice1}}</td>
+            <td> {{que.choice2}}</td>
+            <td> {{que.choice3}}</td>
+            <td> {{que.choice4}}</td>
+            <td> {{que.answerkey}}</td>
+            <td><button (click)=add(i)>Add</button></td>
+            <td><button (click)=remove(i)>Remove</button></td>
+            <!-- [routerLink]="['/addquestionpaper/questionadded/', que.questionpaper]" -->
+            <!-- <td [routerLink]="['/quebank', que.quebankname]"><button>View Questions</button></td> -->
+        </tr>
+    </tbody>
+</table>
+<br>
+<button [routerLink]="['/questionpaper']">Back to question paper list</button>
+
+

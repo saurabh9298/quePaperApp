@@ -1,0 +1,26 @@
+<h1>List of Question Banks</h1>
+<hr>
+
+
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Bank ID</th>
+            <th>Question Bank</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let que of quesBank; index as i">
+            <td>{{que.quebanknameid}}</td>
+            <td > {{que.quebankname}}</td>
+            <td [routerLink]="['/quebank/edit-bank-name', que.quebanknameid]"><button>Edit Name</button></td>
+            <td [routerLink]="['/quebank/delete-bank', que.quebankname, que.quebanknameid]"><button>Delete</button></td>
+            <td [routerLink]="['/quebank', que.quebankname]"><button>View Questions</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- //round brackets aroud an attribute means function binding -->
+<!-- 'click' here is an event -->
+<!-- <button class="btn btn-primary" (click)="loadMore()">Load more</button> -->

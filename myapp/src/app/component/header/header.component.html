@@ -1,0 +1,15 @@
+<button routerLink="/home">Home</button> |
+<button *ngIf="!authService.isUserLoggedIn" routerLink="/login">Login</button>
+<span *ngIf="authService.isUserLoggedIn">
+    <button *ngIf="authService.isUserLoggedIn" routerLink="/quebank">Question Bank</button> |
+    <button *ngIf="authService.isUserLoggedIn" routerLink="/quebank/add-question-bank">Add New Question Bank</button> |
+    <button *ngIf="authService.isUserLoggedIn" routerLink="/questionpaper">Question Paper</button> |
+    <button *ngIf="authService.isUserLoggedIn" routerLink="/addquestionpaper">Add New Question Paper</button> |
+    <button *ngIf="authService.isUserLoggedIn" (click)="logout()">Logout</button> |
+</span>
+
+<!-- <button *ngIf="authService.isUserLoggedIn" (click)="logout()">Logout</button>  -->
+<!-- <button *ngIf="!authService.isUserLoggedIn" routerLink="/login">Login</button> |  -->
+
+
+
